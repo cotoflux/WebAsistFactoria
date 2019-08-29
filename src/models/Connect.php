@@ -4,7 +4,7 @@ class Connect
     private $server = "localhost";
     private $user = "enric";
     private $password = "senglanot1";
-    private $database = "wheel";
+    private $database = "attendancesb";
     private $chartset = "utf-8";
     private $conector;
 
@@ -19,7 +19,7 @@ class Connect
         {
             $response = $this->conector->connect_error;
         }
-        // echo $response;
+        echo $response;
         return $this->conector;
 
     }
@@ -99,12 +99,12 @@ class Connect
  $conexion = new Connect();
 
  $con = $conexion->connectBD();
-$listaId=$conexion->listaUsuarios($con);
+/*$listaId=$conexion->listaUsuarios($con);
 $idUsuario = $conexion->matarUsuario($listaId);
 $nombreMuerto=$conexion->mostrarMuerto($idUsuario,$con);
 $conexion->cambioEstado($idUsuario,$con);
 $conexion->reset($con);
-//echo "<br/> Random entre 5 y 15-->".rand(5,15); 
+//echo "<br/> Random entre 5 y 15-->".rand(5,15); */
 
 
 ?>
