@@ -1,16 +1,13 @@
-function showNameAndIdSchedule()
+$('.pass-list').click(function()
 {
     $.ajax({
-        url:"../controls/saveDataUserProfile.php",
+        url:"../controls/controlerFichar.php",
         type:'POST',
         data:'asd',
-        dataType:'json',
-        success:function(array)
+        success:function()
         {
-            $("#pa1").append($_SESSION['identi']);
-            $("#pa2").append(array[1]);
-            $("#pa3").apeend(array[2]);
+           console.log("Success");
         }
     });
 }
-showNameAndIdSchedule();
+);

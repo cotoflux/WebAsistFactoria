@@ -1,4 +1,5 @@
 <?php session_start(); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -30,6 +31,8 @@
                 <p id="pa1">ID: <?php echo $_SESSION['identi']; ?></p>
                 <p id="pa2">Bienvenid@: <?php echo $_SESSION['user']; ?></p>
                 <p id="pa3">Tipo horario: <?php echo $_SESSION['horario']; ?></p>
+                <p>Fecha: <?php echo date("Y-m-d")?></p>
+                <p>Hora: <?php echo date("h:i:sa")?></p>
             </div>
         </div>
         <div class="mid-right">
@@ -39,11 +42,14 @@
                 <div class="yellow risk-signal"></div>
                 <div class="red risk-signal"></div>
             </div>
-            <div class="student-buttom">
-                <button type="button" class="pass-list button-style">Fichar</button>
-                <button type="button" class="record button-style">Historial</buttom>
+           <!--  <div class="student-buttom">
+                <button type="button" class="pass-list button-style" action="../controls/controlerFichar.php" method="post">Fichar</button>
+                <button type="button" class="record button-style">Historial</button>
 
-            </div>
+            </div> -->
+            <form action="../controls/controlerFichar.php" method="post">
+                <input type="submit" name="someAction" value="GO" />
+            </form>
         </div>
 
     </main>
