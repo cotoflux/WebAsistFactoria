@@ -43,7 +43,7 @@ ul > li > a{
 }
 
 main{
-    height: 75%;
+    
     background-color: #FFFDFD;
     border-bottom:1px solid white;
     display:flex;

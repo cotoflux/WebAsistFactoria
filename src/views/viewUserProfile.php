@@ -54,7 +54,6 @@ session_start();
             </form>
             <form action="../controls/controlHistorialUsuario.php" method="post" id="button_fichar">
                 <input type="submit" name="someAction" value="HISTORIAL" id="historial"/>
-                <a href="../views/viewPersonalUserHistory.php">hh</a>
             </form>
         </div>
 

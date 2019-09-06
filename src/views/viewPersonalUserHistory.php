@@ -1,9 +1,7 @@
 <?php
-include "../controls/controlHistorialUsuario.php";
-$_SESSION['student']=array();
-$a="hola";
-$b="adios";
-array_push($_SESSION['student'],$a,$b);  
+//include "../controls/controlHistorialUsuario.php";
+
+session_start(); 
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -37,14 +35,18 @@ array_push($_SESSION['student'],$a,$b);
             <th>Dia</td> 
             <th>Hora</td>
            </tr>
-           <tr>
            <?php 
-           $result =  $_SESSION['historial'];
-           while ($fila = mysqli_fetch_array($result)) {
-            echo "<td>".$fila['id']."</td>";
-        }
+           foreach ($_SESSION["historial"] as $value) {
+            echo "<tr>";
+            echo "<td>".$value['name']."</td>";
+            echo "<td>".$value['date']."</td>";
+            echo "<td>".$value['time']."</td>";             
+            echo "</tr>";
+           }
+        //    while ($fila = mysqli_fetch_array($result)) {
+        //     echo "<td>".$fila['id']."</td>";
+        // }
     ?>
-           </tr>
        </table>
 
     </main>
@@ -52,9 +54,9 @@ array_push($_SESSION['student'],$a,$b);
         <div class="bottom-info">
             <p>@2019 <span>Spicy Banana</span> from <span>FactoriaF5.</span></p>
             <?php
-             for($i = 0 ; $i < count($_SESSION['student']) ; $i++) {
-                echo $_SESSION['student'][$i];
-                } 
+            //  for($i = 0 ; $i < count($_SESSION['student']) ; $i++) {
+            //     echo $_SESSION['student'][$i];
+            //     } 
             ?>
         </div>
     </footer>
