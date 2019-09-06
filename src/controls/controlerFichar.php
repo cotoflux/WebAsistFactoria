@@ -9,6 +9,8 @@ if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['someAction']))
 {   
     session_start();
     $hora = date("H:i:sa");
+    $_SESSION['fecha']=$hora;
+    echo $_SESSION['fecha'];
     echo $hora;
     $fecha = date("Y-m-d");
     echo $fecha;
@@ -20,8 +22,8 @@ if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['someAction']))
 }
 
 function ficharADDBB($conn,$fecha,$hora,$idUsuario,$meteo){
-    echo "ss";
-        $sql= "INSERT INTO attendance (id_user,date,time,meteo) VALUES(2,'2019-08-29','16:15:22',1)";
-        echo "a";
+  
+        $sql= "INSERT INTO attendance (id_user,date,time,meteo) VALUES($idUsuario,CURDATE(),CURTIME(),1)";
         $result = mysqli_query($conn,$sql);
+        header("Location: ../views/viewUserProfile.php");
 }

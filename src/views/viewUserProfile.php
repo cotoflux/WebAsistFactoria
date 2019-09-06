@@ -1,4 +1,6 @@
-<?php session_start(); ?>
+<?php 
+session_start(); 
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -47,8 +49,12 @@
                 <button type="button" class="record button-style">Historial</button>
 
             </div> -->
-            <form action="../controls/controlerFichar.php" method="post">
-                <input type="submit" name="someAction" value="GO" />
+            <form action="../controls/controlerFichar.php" method="post" id="button_fichar">
+                <input type="submit" name="someAction" value="SUBMIT"/>
+            </form>
+            <form action="../controls/controlHistorialUsuario.php" method="post" id="button_fichar">
+                <input type="submit" name="someAction" value="HISTORIAL" id="historial"/>
+                <a href="../views/viewPersonalUserHistory.php">hh</a>
             </form>
         </div>
 
@@ -58,8 +64,8 @@
             <p>@2019 <span>Spicy Banana</span> from <span>FactoriaF5.</span></p>
         </div>
     </footer>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="viewShowProfile.js"></script>
+<!--     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+ -->    <script src="viewShowProfile.js"></script>
 </body>
 
 </html>

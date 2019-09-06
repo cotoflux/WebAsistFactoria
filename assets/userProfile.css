@@ -125,6 +125,10 @@ main{
     background-color: rgba(39, 52, 67, 0.67);
     color:white;
 }
+form{
+    height: 10vh;
+    width: 10%;
+}
 footer{
     height:10%;
     background-color: #273443;

@@ -1,4 +1,4 @@
-$('.pass-list').click(function()
+/* $('.pass-list').click(function()
 {
     $.ajax({
         url:"../controls/controlerFichar.php",
@@ -10,4 +10,7 @@ $('.pass-list').click(function()
         }
     });
 }
-);
+); */
+let btnHistory= document.getElementById('historial');
+
+

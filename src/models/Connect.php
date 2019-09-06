@@ -2,9 +2,9 @@
 class Connect
 {
     private $server = "localhost";
-    private $user = "enric";
-    private $password = "senglanot1";
-    private $database = "attendancesb";
+    private $user = "root";
+    private $password = "";
+    private $database = "mydb";
     private $chartset = "utf-8";
     private $conector;
 
